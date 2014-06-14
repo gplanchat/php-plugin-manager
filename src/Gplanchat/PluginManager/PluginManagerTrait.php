@@ -24,7 +24,8 @@ trait PluginManagerTrait
         $queue = $this->pluginQueues[$namespace];
 
         $queue->insert($plugin, $priority);
-
+        $plugin->register($this);
+        
         return $this;
     }
 
