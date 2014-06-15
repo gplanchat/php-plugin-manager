@@ -1,8 +1,8 @@
 {
     "name": "gplanchat/php-plugin-manager",
-    "description": "An basic plugin manager",
+    "description": "A basic plugin manager",
     "minimum-stability": "dev",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Grégory PLANCHAT",
@@ -22,6 +22,6 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Gplanchat\\PluginManager": "src/"}
+        "psr-4": {"Gplanchat\\PluginManager": "src/"}
     }
 }
