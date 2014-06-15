@@ -10,4 +10,10 @@ interface PluginInterface
      * @return mixed
      */
     public function __invoke($namespace, array $params = []);
+
+    /**
+     * @param PluginManagerInterface $application
+     * @return $this
+     */
+    public function register(PluginManagerInterface $application);
 }

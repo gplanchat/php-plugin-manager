@@ -17,7 +17,7 @@ interface PluginManagerInterface
      * @param array $params
      * @return mixed
      */
-    public function callPlugin($namespace, array $params);
+    public function callPlugin($namespace, array $params = []);
 
     /**
      * @param string $namespace

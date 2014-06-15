@@ -12,7 +12,7 @@ trait PluginManagerTrait
      * @param PluginInterface $plugin
      * @param string $namespace
      * @param int|null $priority
-     * @return PluginManagerInterface
+     * @return $this
      */
     public function registerPlugin(PluginInterface $plugin, $namespace, $priority = null)
     {
@@ -25,14 +25,14 @@ trait PluginManagerTrait
 
         $queue->insert($plugin, $priority);
         $plugin->register($this);
-        
+
         return $this;
     }
 
     /**
      * @param string $namespace
      * @param array $params
-     * @return PluginManagerInterface
+     * @return $this
      */
     public function callPlugin($namespace, array $params = [])
     {
@@ -49,7 +49,7 @@ trait PluginManagerTrait
 
     /**
      * @param string $namespace
-     * @return PluginManagerInterface
+     * @return $this
      */
     public function clearPlugins($namespace)
     {
@@ -59,7 +59,7 @@ trait PluginManagerTrait
 
     /**
      * @param string $namespace
-     * @return PluginManagerInterface
+     * @return PriorityQueue|null
      */
     public function getPlugins($namespace)
     {
